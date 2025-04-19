@@ -1,0 +1,127 @@
+reaxt-dashboard-main
+¦   .gitignore
+¦   main.js
+¦   package.json
+¦   README.md
+¦   struttura.txt
+¦   
++---public
+¦   ¦   electron-app-package.json
+¦   ¦   favicon.ico
+¦   ¦   icon.ico
+¦   ¦   index.html
+¦   ¦   logo192.png
+¦   ¦   logo512.png
+¦   ¦   main.js
+¦   ¦   manifest.json
+¦   ¦   
+¦   +---assets
+¦           user.png
+¦           
++---src
+    ¦   App.js
+    ¦   App.jsx
+    ¦   AppRoutes.jsx
+    ¦   index.css
+    ¦   index.js
+    ¦   theme.js
+    ¦   
+    +---components
+    ¦   ¦   BarChart.jsx
+    ¦   ¦   GeographyChart.jsx
+    ¦   ¦   Header.jsx
+    ¦   ¦   LineChart.jsx
+    ¦   ¦   PieChart.jsx
+    ¦   ¦   ProgressCircle.jsx
+    ¦   ¦   StatBox.jsx
+    ¦   ¦   
+    ¦   +---calendar
+    ¦   ¦       TaskCalendar.jsx
+    ¦   ¦       
+    ¦   +---dashboard
+    ¦   ¦       ProjectsOverview.jsx
+    ¦   ¦       RecentActivity.jsx
+    ¦   ¦       TasksStatus.jsx
+    ¦   ¦       TeamWorkload.jsx
+    ¦   ¦       TimeTracking.jsx
+    ¦   ¦       UpcomingDeadlines.jsx
+    ¦   ¦       
+    ¦   +---documents
+    ¦   ¦       DocumentEditor.jsx
+    ¦   ¦       
+    ¦   +---layout
+    ¦   ¦       Layout.jsx
+    ¦   ¦       MainContainer.jsx
+    ¦   ¦       Sidebar.jsx
+    ¦   ¦       Topbar.jsx
+    ¦   ¦       
+    ¦   +---tasks
+    ¦       ¦   KanbanBoard.jsx
+    ¦       ¦   TaskCard.jsx
+    ¦       ¦   
+    ¦       +---gantt
+    ¦               GanttChart.jsx
+    ¦               
+    +---data
+    ¦       mockData.js
+    ¦       mockGeoFeatures.js
+    ¦       
+    +---scenes
+    ¦   +---bar
+    ¦   ¦       index.jsx
+    ¦   ¦       
+    ¦   +---calendar
+    ¦   ¦       calendar.jsx
+    ¦   ¦       
+    ¦   +---contacts
+    ¦   ¦       index.jsx
+    ¦   ¦       
+    ¦   +---dashboard
+    ¦   ¦       index.jsx
+    ¦   ¦       
+    ¦   +---faq
+    ¦   ¦       index.jsx
+    ¦   ¦       
+    ¦   +---form
+    ¦   ¦       index.jsx
+    ¦   ¦       
+    ¦   +---geography
+    ¦   ¦       index.jsx
+    ¦   ¦       
+    ¦   +---global
+    ¦   ¦       Sidebar.jsx
+    ¦   ¦       Topbar.jsx
+    ¦   ¦       
+    ¦   +---invoices
+    ¦   ¦       index.jsx
+    ¦   ¦       
+    ¦   +---line
+    ¦   ¦       index.jsx
+    ¦   ¦       
+    ¦   +---pie
+    ¦   ¦       index.jsx
+    ¦   ¦       
+    ¦   +---team
+    ¦           index.jsx
+    ¦           
+    +---services
+    ¦       api.js
+    ¦       authService.js
+    ¦       documentService.js
+    ¦       projectService.js
+    ¦       taskService.js
+    ¦       
+    +---store
+    ¦   ¦   index.js
+    ¦   ¦   
+    ¦   +---slices
+    ¦           authSlice.js
+    ¦           documentSlice.js
+    ¦           projectSlice.js
+    ¦           taskSlice.js
+    ¦           teamSlice.js
+    ¦           uiSlice.js
+    ¦           
+    +---theme
+            index.js
+            
