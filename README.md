@@ -1,104 +1,135 @@
-# React Admin Dashboard Desktop App
+# ProjectFlow - Dashboard React + Electron
 
-🚀 **Dashboard amministrativo** sviluppato in **React + MUI** e impacchettato con **Electron** per distribuzione desktop (.exe). Interfaccia moderna, stile ClickUp, performance ottimizzate e architettura modulare.
+🚀 **Piattaforma di gestione progetti** sviluppata in **React + MUI**, con packaging tramite **Electron** per una distribuzione desktop multipiattaforma.
+
+Interfaccia moderna ispirata a ClickUp e Notion, performance ottimizzate e architettura altamente modulare e scalabile.
 
 ---
 
 ## 🖥️ Caratteristiche principali
 
-- ⚛️ **Frontend React 18** con routing via `react-router-dom`
-- 🎨 **Material UI 5** per design responsivo e dark mode
-- 📊 Componenti dinamici: grafici (Line, Bar, Pie, Geo), tabelle, calendario, FAQ e altro
-- 🪟 **Electron** integrato per creazione di app desktop standalone
-- 🏗️ Build automatica con `electron-builder`
-- 📦 Code splitting, lazy loading, performance tuning ready
-- 🌈 Tema dark/light dinamico con `ThemeProvider`
-- 🔒 Login e autenticazione (in lavorazione...)
+- ⚛️ **React 18** + routing con `react-router-dom`
+- 🎨 **Material UI 5** con supporto tema dark/light
+- 🗂️ Visualizzazioni flessibili: Lista, Kanban, Calendario, Gantt
+- 📁 **Gestione documenti** con editor integrato e versioning
+- ⏱️ Tracciamento tempo, cronologia attività, assegnazioni
+- 📊 Grafici dinamici (Line, Bar, Pie, Geo) e dashboard personalizzabili
+- 🪟 **Electron** per funzioni desktop (notifiche, offline, tray icon)
+- 📦 **electron-builder** per generare `.exe`, `.dmg`, `.AppImage`, ecc.
+- 🔒 Login e autenticazione (Firebase Auth in sviluppo)
 
 ---
 
-## 🛠️ Installazione e Avvio
+## 🛠️ Guida all’installazione
 
-### 1. Clona il repo
-
+### 1. Clona il repository
 ```bash
 git clone https://github.com/OliverPistillo/react-dashboard.git
 cd react-dashboard
 ```
 
-### 2. Installa le dipendenze
-
+### 2. Installa le dipendenze principali
 ```bash
 npm install
 ```
 
 ### 3. Avvia in modalità sviluppo
-
 ```bash
 npm start
 ```
-
-Aprirà:
+Questo comando eseguirà contemporaneamente:
 - Il server React su `http://localhost:5000`
-- L'app Electron con renderer React
+- L'app Electron collegata al renderer
 
 ---
 
 ## 📦 Build per produzione
-
 ```bash
 npm run build
 ```
-
-Questo comando:
-- Compila l'app React
-- Copia il `main.js`
-- Lancia `electron-builder` per creare l'eseguibile
-
-Troverai l’output in `dist/` pronto da distribuire (`.exe`, `.dmg` ecc.)
+Il comando genera:
+- Build ottimizzata React
+- Build Electron via `electron-builder`
+- Output finale nella cartella `dist/`
 
 ---
 
 ## 📁 Struttura del progetto
-
 ```
-react-admin-dashboard-master/
-│
-├── public/           # File statici (HTML, icone, manifest)
-├── src/              # Codice sorgente React
-│   ├── components/   # Componenti riutilizzabili
-│   ├── scenes/       # Pagine (Dashboard, Form, FAQ, ecc.)
-│   ├── data/         # MockData e risorse geografiche
-│   └── theme.js      # Tema globale con dark/light mode
-├── main.js           # Entry point Electron
-├── package.json      # Configurazione app + script + dipendenze
-├── .gitignore
-└── README.md         # Questo file
+project-flow/
+├── electron/
+│   ├── main.js
+│   └── preload.js
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── manifest.json
+├── src/
+│   ├── components/
+│   ├── scenes/
+│   ├── services/
+│   ├── store/
+│   ├── theme/
+│   ├── data/
+│   ├── utils/
+│   └── hooks/
+├── package.json
+└── README.md
 ```
 
 ---
 
-## ✨ In arrivo
+## ✨ Funzionalità implementate
 
-- [ ] Modulo login con Firebase Auth (email + Google)
-- [ ] Multi-tenant backend + database SQL
-- [ ] Versione mobile (React Native o alternativa leggera)
-- [ ] Notifiche desktop, tray icon, auto-update
+- 🧩 Gestione task e progetti con viste multiple
+- 💬 Commenti, allegati, assegnazioni, priorità
+- 📅 Calendario e Gantt con drag & drop
+- 📈 Dashboard metriche e produttività
+- 📝 Editor documenti con versioning
+- 👥 Team e permessi per progetto
+- 🧠 Dark mode / Light mode dinamico
+- 🔔 Notifiche desktop e supporto offline
+- 🔐 Login/registrazione utente
+
+---
+
+## 🚧 In sviluppo / Prossimi step
+
+- [ ] Notifiche real-time
+- [ ] Backend multi-tenant SQL
+- [ ] App mobile companion (React Native)
+- [ ] Collaborazione live (WebSocket)
+- [ ] Integrazione Google Drive / Slack / Zapier
+
+---
+
+## 🧠 Troubleshooting rapidi
+
+**Errore: Module not found**
+→ Verifica gli import relativi e la presenza dei file
+
+**Electron non si avvia**
+→ Assicurati che React sia su porta 5000 e `electron/main.js` sia corretto
+
+**Build fallita**
+→ Controlla `package.json` e che tutte le dipendenze siano installate
+
+**Errore di tipi** (se usi librerie con TS)
+→ Installa: `npm install --save-dev @types/nome-libreria`
 
 ---
 
 ## 📌 Autore
-
 Made with ❤️ by **Oliver Pistillo**  
 🔗 [github.com/OliverPistillo](https://github.com/OliverPistillo)
 
 ---
 
-## 🧠 License
-
-Questo progetto è distribuito con licenza **MIT**.  
-Usalo, forkalo, miglioralo!
+## 🧠 Licenza
+Progetto distribuito con licenza **MIT**.  
+Usalo, forkalo, miglioralo.
 
 ---
 
-> _"Simple, scalable, and beautiful. Exactly what admin dashboards should be."_ 😎
+> _"Flexible like Airtable. Powerful like ClickUp. Beautiful like Notion."_
+
